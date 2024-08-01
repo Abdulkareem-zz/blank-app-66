@@ -1,9 +1,11 @@
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # Suppress TensorFlow logging
+
 import streamlit as st
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
 import gdown
-import os
 
 @st.cache(allow_output_mutation=True)
 def load_model_from_drive():
